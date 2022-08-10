@@ -1,0 +1,96 @@
+.header-l {
+    font-style: italic;
+}
+
+.transformOut {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+.setting-body {
+    display: flex;
+    .body-left {
+        width: 100px;
+        .userAcount {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #909399;
+            color: #fff;
+            margin: 5px 5px;
+        }
+        .userTheam {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #909399;
+            color: #fff;
+            margin: 5px 5px;
+        }
+    }
+    .body-right {
+        width: 100%;
+        .userAcount-setting {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #f56c6c;
+            margin: 5px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .userStrongTips {
+            height: 60px;
+            line-height: 60px;
+            margin: 5px 5px;
+            color: #fff;
+            .switch {
+                cursor: pointer;
+                width: 60px;
+                height: 30px;
+                border-radius: 30px;
+                overflow: hidden;
+                vertical-align: middle;
+                position: relative;
+                display: inline-block;
+                background: #ccc;
+                box-shadow: 0 0 1px #36a6d4;
+            }
+            .switch input {
+                visibility: hidden;
+            }
+            .switch span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                background: #fff;
+                width: 50%;
+                height: 100%;
+                transition: all linear 0.2s;
+            }
+            .switch span::before {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                content: "";
+                width: 200%;
+                height: 100%;
+                border-radius: 30px;
+                background: #36a6d4;
+            }
+            .switch span::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #fff;
+            }
+            .switch input:checked + span {
+                transform: translateX(100%);
+            }
+        }
+    }
+}
